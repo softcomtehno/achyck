@@ -1,18 +1,15 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { DataProvider } from './context/DataContext';
-import PublicProfile from './pages/PublicProfile';
-import Dashboard from './pages/Dashboard';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ProfilePage from './pages/ProfilePage';
+import DashboardPage from './pages/DashboardPage';
 
 function App() {
   return (
-    <DataProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<PublicProfile />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-        </Routes>
-      </Router>
-    </DataProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ProfilePage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
