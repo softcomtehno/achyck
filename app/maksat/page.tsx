@@ -33,11 +33,9 @@ const specialists: Record<string, Specialist> = {
   },
 };
 
-export default function SpecialistProfile() {
+export default function Maksat() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
-  const { slug } = useParams<{ slug: string }>();
-  const specialist = specialists[slug];
-  if (!specialist) notFound();
+
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
       <Header onBookClick={() => setIsBookingOpen(true)} />
